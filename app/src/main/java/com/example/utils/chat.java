@@ -1,16 +1,16 @@
 package com.example.utils;
 
 public class chat {
+    public static final int TYPE_RECEIVED = 0;
+    public static final int TYPE_SENT = 1;
+    //    对话文本
+    private String text;
+    //    标示
+    private int type;
 
-    public static final int TYPE_RECEIVE = 0 ;
-    public static final int TYPR_SENT=1 ;
-
-    private String text ;
-    private int type ;
-
-    public  chat(String text , int type){
+    public chat(String text, int type) {
         this.text = text;
-        this.type = type ;
+        this.type = type;
     }
 
     public String getText() {
@@ -29,7 +29,8 @@ public class chat {
         this.type = type;
     }
 
-    public String toSting(){
+    @Override
+    public String toString() {
         return "ChatLiatData{" +
                 "text='" + text + '\'' +
                 ", type=" + type +
